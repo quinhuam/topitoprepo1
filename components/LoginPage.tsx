@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useApp } from '../App.tsx';
 import { View } from '../types.ts';
 import { EyeIcon, EyeOffIcon, FacebookIcon, InstagramIcon, YoutubeIcon, TiktokIcon } from './icons';
+import loginBackground from '../src/assets/images/login-bg-2021-desktop.jpg';
 
 const TopitopLogo = () => (
     <div className="text-left mb-8">
@@ -23,7 +24,7 @@ const LoginPage: React.FC = () => {
     return (
         <div className="min-h-screen flex flex-col lg:flex-row">
             {/* Left side: Form */}
-            <div className="w-full lg:w-1/2 xl:w-1/3 bg-white flex flex-col justify-center items-center p-8 sm:p-12 order-2 lg:order-1">
+            <div className="w-full lg:w-1/2 xl:w-1/3 bg-white flex flex-col justify-center items-center p-8 sm:p-12 order-2 lg:order-1 relative z-10">
                 <div className="w-full max-w-sm">
                     <TopitopLogo />
                     <h2 className="text-xl font-semibold text-gray-800 mb-1">Bienvenida a Topitop catálogo</h2>
@@ -70,14 +71,16 @@ const LoginPage: React.FC = () => {
             </div>
 
             {/* Right side: Image */}
-            <div className="relative w-full lg:w-1/2 xl:w-2/3 bg-cover bg-center order-1 lg:order-2 min-h-[300px] lg:min-h-screen" style={{ backgroundImage: "url('https://placehold.co/1200x1800/E2E8F0/E2E8F0')" }}>
+            <div 
+                className="relative w-full lg:w-1/2 xl:w-2/3 bg-cover bg-center order-1 lg:order-2 min-h-[300px] lg:min-h-screen" 
+                style={{ 
+                    backgroundImage: `url(${loginBackground})`,
+                    backgroundPosition: 'center 20%'
+                }}>
                  <div className="absolute top-0 right-0 p-6 flex space-x-6">
                     <button onClick={() => setView(View.AFFILIATE)} className="text-black font-bold hover:underline">AFÍLIATE</button>
                     <a href="#" className="text-black font-bold hover:underline">CONTÁCTANOS</a>
                 </div>
-                 <div className="absolute bottom-10 left-10 bg-white p-4 rounded-lg shadow-lg hidden md:block animate-fade-in">
-                    <img src="https://placehold.co/200x300/E2E8F0/E2E8F0" alt="Catalog Preview" className="w-48"/>
-                 </div>
             </div>
         </div>
     );

@@ -3,6 +3,10 @@ import React, { useState } from 'react';
 import { useApp } from '../App.tsx';
 import { View } from '../types.ts';
 import { ChevronRightIcon, ChevronLeftIcon } from './icons';
+import dashboardBanner from '../src/assets/images/dashboard-banner.jpg.jpg';
+import promo1 from '../src/assets/images/banner1.png';
+import promo2 from '../src/assets/images/banner2.png';
+import promo3 from '../src/assets/images/banner3.png';
 
 const DashboardPage: React.FC = () => {
   const { setView, userData } = useApp();
@@ -10,13 +14,13 @@ const DashboardPage: React.FC = () => {
 
   const slides = [
     {
-      image: 'https://placehold.co/1200x400/E2E8F0/E2E8F0?text=LO%2B+NUEVO',
+      image: dashboardBanner,
       title: 'LO+ NUEVO',
       subtitle: 'edición DENIM',
       linkText: 'Ver más →'
     },
     {
-      image: 'https://placehold.co/1200x400/E2E8F0/E2E8F0?text=VERANO',
+      image: dashboardBanner,
       title: 'VERANO',
       subtitle: 'Tendencias 2024',
       linkText: 'Descubrir →'
@@ -116,15 +120,15 @@ const DashboardPage: React.FC = () => {
           </button>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-           <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <img src="https://placehold.co/600x400/E2E8F0/E2E8F0?text=Promo+1" alt="Gana 1" className="w-full h-48 object-cover"/>
-           </div>
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <img src="https://placehold.co/600x400/E2E8F0/E2E8F0?text=Promo+2" alt="Gana 2" className="w-full h-48 object-cover"/>
-           </div>
-           <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <img src="https://placehold.co/600x400/E2E8F0/E2E8F0?text=Promo+3" alt="Gana 3" className="w-full h-48 object-cover"/>
-           </div>
+     <div className="bg-white rounded-lg shadow-md overflow-hidden">
+       <img src={promo1} alt="Gana 1" className="w-full h-48 object-cover"/>
+     </div>
+      <div className="bg-white rounded-lg shadow-md overflow-hidden">
+       <img src={promo2} alt="Gana 2" className="w-full h-48 object-cover"/>
+     </div>
+     <div className="bg-white rounded-lg shadow-md overflow-hidden">
+       <img src={promo3} alt="Gana 3" className="w-full h-48 object-cover"/>
+     </div>
         </div>
       </div>
     </div>
