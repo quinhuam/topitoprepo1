@@ -5,10 +5,10 @@ import { useApp } from '../App.tsx';
 import { View } from '../types.ts';
 import { MenuIcon, SearchIcon, BellIcon, ShoppingCartIcon, ChevronDownIcon } from './icons';
 
+import topitopLogo from '../src/assets/images/logocatalogo.jpg';
 const TopitopLogo = () => (
-    <div>
-        <h1 className="text-3xl font-bold text-red-600 tracking-tighter">topitop</h1>
-        <p className="text-xs text-gray-500 tracking-[.2em] -mt-1">Catálogo</p>
+    <div className="flex items-center">
+        <img src={topitopLogo} alt="Topitop Catálogo" className="h-10 w-auto" />
     </div>
 );
 

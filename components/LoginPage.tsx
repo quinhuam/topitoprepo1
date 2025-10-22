@@ -1,14 +1,14 @@
+
 import React, { useState } from 'react';
-// FIX: Add .tsx/.ts extensions to fix module resolution errors.
 import { useApp } from '../App.tsx';
 import { View } from '../types.ts';
 import { EyeIcon, EyeOffIcon, FacebookIcon, InstagramIcon, YoutubeIcon, TiktokIcon } from './icons';
 import loginBackground from '../src/assets/images/login-bg-2021-desktop.jpg';
+import topitopLogo from '../src/assets/images/logocatalogo.jpg';
 
 const TopitopLogo = () => (
-    <div className="text-left mb-8">
-        <h1 className="text-5xl font-bold text-red-600 tracking-tighter">topitop</h1>
-        <p className="text-sm text-gray-500 tracking-[.25em] -mt-1">Catálogo</p>
+    <div className="text-left mb-8 flex flex-col items-start">
+        <img src={topitopLogo} alt="Topitop Catálogo" className="h-16 w-auto mb-2" />
     </div>
 );
 
