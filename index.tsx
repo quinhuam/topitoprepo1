@@ -1,6 +1,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import './src/index.css';
 // FIX: Add .tsx extension to fix module resolution error.
 import App from './App.tsx';
 
